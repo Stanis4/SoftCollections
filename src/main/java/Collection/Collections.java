@@ -1,13 +1,10 @@
 package Collection;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Collections {
-    //private static Logger logger = LogManager.getLogger(Collections.class.getName());
 
     //first task
     public static <K> int countWord(HashMap <K, String> hashMap,String word) {
