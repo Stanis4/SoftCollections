@@ -1,9 +1,9 @@
 package Runner;
-import Collection.Collections;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import Collection.CollectionMethods;
 
-import java.util.HashMap;
+import java.util.*;
 
 public class Runner {
     public static Logger logger = LogManager.getLogger(Runner.class.getName());
@@ -18,7 +18,17 @@ public class Runner {
         hashMap.put(2, "Donny");
         hashMap.put(5, "Peter");
         hashMap.put(6, "Dan");
-        logger.info("The word '"+ word + "' repeats " + Collections.countWord(hashMap, word) + " times");
+        logger.info("First task: The word '"+ word + "' repeats " + CollectionMethods.countWord(hashMap, word) + " times");
+
+        List<String> arrays = Arrays.asList("11", "22", "33", "44", "55");
+        logger.info("Second task: " + CollectionMethods.getStringOfAllElements(new HashSet<Object>(arrays)));
+
+        logger.info("Third task: " + CollectionMethods.getValuesOfHashMap(hashMap));
+
+        ArrayList<String> arrayList = new ArrayList<>(arrays);
+        logger.info("Forth task: " + CollectionMethods.getElementsByPosition(arrayList, 4));
+
+        logger.info("Fifth task: " + CollectionMethods.reverseArrayList(arrayList));
     }
 }
 
